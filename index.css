@@ -1,0 +1,114 @@
+/* Base */
+:root{
+  --bg:#F4C430;   /* keep your yellow */
+  --ink:#000000;  /* keep your black */
+  --accent:#F43409; /* keep your orange-red */
+}
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body{ 
+  background: var(--bg);
+  font-family: "Poppins", sans-serif; 
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container{
+  width: min(1040px, 92%);
+  margin-inline: auto;
+  padding: 24px 0;
+}
+
+/* Header */
+.site-header{
+  background: var(--accent);
+  border-bottom: 8px solid var(--ink);
+}
+.site-title{
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  text-align: center;
+  padding: 16px 0;
+}
+
+/* Hero */
+.hero{
+  padding: 32px 0;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.tagline{
+  margin: 0 0 8px;
+  font-size: clamp(22px, 3.2vw, 28px);
+  font-weight: 600;
+}
+.hero p{
+  margin: 0;
+  font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/* Profile Photo */
+.profile-figure{
+  margin: 0;
+  background: #fff3;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  overflow: hidden;
+  /* Elevation look */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20), 0 2px 8px rgba(0,0,0,0.12);
+}
+.profile-photo{
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* About Me */
+.about .container{
+  background: #ffffff20;
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.20), 0 2px 8px rgba(0,0,0,0.12);
+}
+.about h2{
+  margin-top: 0;
+  font-size: clamp(22px, 3.2vw, 28px);
+  border-bottom: 4px solid var(--ink);
+  padding-bottom: 8px;
+}
+.about p{
+  margin: 10px 0;
+}
+
+/* Website footer */
+.site-footer{
+  padding: 24px 0 40px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+  .profile-figure{
+    max-width: 360px;
+    margin-inline: auto;
+  }
+}
